@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>UCLFWPKD</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            Residual Fusion Probabilistic Knowledge Distillation for Speech Enhancement
+                            </h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">Jiaming Cheng, Ruiyu Liang, Lin Zhou, Li Zhao, Chengwei Huang, and Björn W. Schuller</span>
+                        </div>
+
+                        <!-- <div class="is-size-5 publication-authors"> -->
+                        <!-- <span class="author-block">ICASSP 2024 Satellite Workshop</span> -->
+                        <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            In recent years, there has been a great deal of research in developing neural network (NN)-based speech enhancement (SE) models, achieving promising results. However, NN-based models typically require expensive computational costs to show remarkable performance, constraining their deployment in real-world scenarios, especially when hardware resources are limited, or latency requirements are strict. To reduce this computational burden, we propose a residual fusion probabilistic knowledge distillation (KD) method for the SE task, transferring knowledge from a deep teacher to a shallower student model. Previous KD approaches commonly focus on narrowing the output distances between teachers and students, lacking research on the intermediate representation of the models. In this paper, we first study the cross-layer residual feature fusion strategy, enabling the student model to distill knowledge contained in multiple teacher layers from shallow to deep. Secondly, frame weighting probabilistic distillation loss is proposed to assign more emphasis on frames containing essential information and preserve pairwise probabilistic similarities in the representation space. The proposed distillation framework is applied to the dual-path dilated convolutional recurrent network (DPDCRN) that won the championship of the SE track in the L3DAS23 challenge. Extensive experiments are conducted on single-channel and multi-channel SE datasets, respectively. Objective evaluations show that the proposed KD strategy outperforms other distillation methods and considerably improves the enhancement effect of the low-complexity student model (with only 17% of the teacher's parameters).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    <h2 class="title is-2">16K Samples Enhanced by our proposed method</h2>
+                </div>
+            </div>
+        </div>
+    </section>      
+
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                
+                <div id="publication-body" class="publication-body img">
+
+                    
+
+                    <h2 class="title is-3">1. DNS Challenge Dataset</h2>
+                    
+                    <div class="content has-text-justified">
+                        <p>
+                            The INTERSPEECH 2020 Deep Noise Suppression (DNS) Challenge Dataset. The DNS dataset contains 500 hours of clean speech data from 2,150 speakers and approximately 180 hours of 65,000 noise clips.
+                            <br>
+                            <br>
+                            Link:   <a href="https://github.com/microsoft/DNS-Challenge/">DNS Dataset</a>
+                        </p>
+                    </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    
+
+                    <div class="content">
+                        <br>
+                        <table>
+                            <thead>
+                                <tr align="center">
+                                    <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Noisy</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Enhanced</h3>
+                                        </center>
+                                    </th>
+                                    <!-- <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th> -->
+                                </tr>
+                            </thead>
+
+
+                                <script>
+
+
+
+                                    var data = [];
+                                    for(var i=0;i<5;i++)
+                                    {
+                                        var obj = {
+                                            id:`${(i + 1).toString().padStart(1, '0')}`,
+                                            noisy: `n${(i + 1).toString().padStart(1, '0')}`,
+                                            clean: `e${(i + 1).toString().padStart(1, '0')}`,
+                                        };
+                                        // var aaa=0
+
+                                        // 将对象添加到数组中
+                                        data.push(obj);
+                                    }
+                                  
+                                    
+                                    
+
+
+                                  console.log(data);
+
+                                  data.forEach(function(row) {
+                                    document.write(`
+
+                                    
+                                    <tbody>
+                                
+
+                                <tr  align="center">
+                                    <td>
+                                        <center>clips #${row.id}</center>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
+                                            <source src="static/audios/UCLFWPKD/DNS/audios/fileid_${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
+                                            <source src="static/audios/UCLFWPKD/DNS/audios/fileid_${row.clean}.wav">
+                                        </audio></td>
+                                </tr>
+                                
+                            </tbody>
+
+                                    `);
+                                  });
+                                </script>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                
+                <div id="publication-body" class="publication-body img">
+
+                    
+
+                    <h2 class="title is-3">2. L3DAS23 Dataset</h2>
+                    
+                    <div class="content has-text-justified">
+                        <p>
+                            L3DAS23 task 1: 3D speech enhancement. The target of the task is to extract the monophonic signal from the 3D mixture containing various background noises. The speech data contains over 4000 virtual 3D audio for up to 12 seconds. The noise set selects 12 transient noise classes that can be heard in an office and 4 continuous noise classes. For the challenge, two Ambisonics microphones are placed in 443 random positions of 68 houses, and B-Format ACN/SN3D impulse responses of the rooms are generated by placing the sound sources in random locations of a cylindrical grid. The speech data are released as 8-channel 16kHz 16-bit WAV files, including two first-order Ambisonics recordings (each with 4 channels).
+                            <br>
+                            <br>
+                            Link:   <a href="https://www.l3das.com/icassp2023/">L3DAS23 Dataset</a>
+                        </p>
+                    </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="publication-body" class="publication-body img">
+                    
+
+                    <div class="content">
+                        <br>
+                        <table>
+                            <thead>
+                                <tr align="center">
+                                    <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Noisy</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Enhanced</h3>
+                                        </center>
+                                    </th>
+                                    <!-- <th>
+                                        <center>
+                                            <h3></h3>
+                                        </center>
+                                    </th> -->
+                                </tr>
+                            </thead>
+
+
+                                <script>
+
+
+
+                                    var data = [];
+                                    for(var i=0;i<5;i++)
+                                    {
+                                        var obj = {
+                                            id:`${(i + 1).toString().padStart(1, '0')}`,
+                                            noisy: `n${(i + 1).toString().padStart(1, '0')}`,
+                                            clean: `e${(i + 1).toString().padStart(1, '0')}`,
+                                        };
+                                        // var aaa=0
+
+                                        // 将对象添加到数组中
+                                        data.push(obj);
+                                    }
+                                  
+                                    
+                                    
+
+
+                                  console.log(data);
+
+                                  data.forEach(function(row) {
+                                    document.write(`
+
+                                    
+                                    <tbody>
+                                
+
+                                <tr  align="center">
+                                    <td>
+                                        <center>clips #${row.id}</center>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
+                                            <source src="static/audios/UCLFWPKD/L3DAS23/audios/${row.noisy}.wav">
+                                        </audio></td>
+                                    </td>
+                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
+                                            <source src="static/audios/UCLFWPKD/L3DAS23/audios/${row.clean}.wav">
+                                        </audio></td>
+                                </tr>
+                                
+
+
+                                
+                            </tbody>
+
+                                    `);
+                                  });
+                                </script>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  
+</body>
+
+</html>
