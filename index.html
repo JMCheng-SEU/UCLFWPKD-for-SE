@@ -92,6 +92,13 @@
             <div class="container">
                 <div id="publication-body" class="publication-body img">
                     <h2 class="title is-2">16K Samples Display</h2>
+                    <p>
+                        We provide samples of speech processed by different algorithms. Among them, "Noisy" refers to the original noisy speech, "Student" refers to the undistilled student model DPDCRN-S, "Teacher" refers to the undistilled teacher model DPDCRN-T, "Student-CLSKD" refers to the student model with cross-layer similarity distillation [1], and "Student-UCLFWPKD" refers to the student model with the unified cross-layer frame weighting probabilistic distillation proposed in our paper.
+                    </p>
+                    <br>
+                    <p>
+                        [1]&nbsp;&nbsp;&nbsp;J. Cheng, R. Liang, Y. Xie, L. Zhao, B. Schuller, J. Jia, and Y. Peng, "Cross-Layer Similarity Knowledge Distillation for Speech Enhancement," in Proc. Interspeech 2022, 2022, pp. 926–930.
+                    </p>
                 </div>
             </div>
         </div>
@@ -155,7 +162,22 @@
                                     </th>
                                     <th>
                                         <center>
-                                            <h3>Enhanced</h3>
+                                            <h3>Student</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Teacher</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Student-CLSKD</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Student-UCLFWPKD</h3>
                                         </center>
                                     </th>
                                     <!-- <th>
@@ -177,7 +199,10 @@
                                         var obj = {
                                             id:`${(i + 1).toString().padStart(1, '0')}`,
                                             noisy: `n${(i + 1).toString().padStart(1, '0')}`,
-                                            clean: `e${(i + 1).toString().padStart(1, '0')}`,
+                                            student: `s${(i + 1).toString().padStart(1, '0')}`,
+                                            teacher: `t${(i + 1).toString().padStart(1, '0')}`,
+                                            CLSKD: `cs${(i + 1).toString().padStart(1, '0')}`,
+                                            CLFWPKD: `cfp${(i + 1).toString().padStart(1, '0')}`,
                                         };
                                         // var aaa=0
 
@@ -200,15 +225,24 @@
 
                                 <tr  align="center">
                                     <td>
-                                        <center>clips #${row.id}</center>
+                                        <center>Clips #${row.id}</center>
                                     </td>
-                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
-                                            <source src="static/audios/UCLFWPKD/DNS/audios/fileid_${row.noisy}.wav">
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/UCLFWPKD/DNS/audios_new/fileid_${row.noisy}.wav">
                                         </audio></td>
                                     </td>
-                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
-                                            <source src="static/audios/UCLFWPKD/DNS/audios/fileid_${row.clean}.wav">
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/UCLFWPKD/DNS/audios_new/fileid_${row.student}.wav">
                                         </audio></td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                        <source src="static/audios/UCLFWPKD/DNS/audios_new/fileid_${row.teacher}.wav">
+                                    </audio></td>        
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                        <source src="static/audios/UCLFWPKD/DNS/audios_new/fileid_${row.CLSKD}.wav">
+                                    </audio></td>   
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                        <source src="static/audios/UCLFWPKD/DNS/audios_new/fileid_${row.CLFWPKD}.wav">
+                                    </audio></td>        
                                 </tr>
                                 
                             </tbody>
@@ -280,7 +314,22 @@
                                     </th>
                                     <th>
                                         <center>
-                                            <h3>Enhanced</h3>
+                                            <h3>Student</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Teacher</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Student-CLSKD</h3>
+                                        </center>
+                                    </th>
+                                    <th>
+                                        <center>
+                                            <h3>Student-UCLFWPKD</h3>
                                         </center>
                                     </th>
                                     <!-- <th>
@@ -302,7 +351,10 @@
                                         var obj = {
                                             id:`${(i + 1).toString().padStart(1, '0')}`,
                                             noisy: `n${(i + 1).toString().padStart(1, '0')}`,
-                                            clean: `e${(i + 1).toString().padStart(1, '0')}`,
+                                            student: `s${(i + 1).toString().padStart(1, '0')}`,
+                                            teacher: `t${(i + 1).toString().padStart(1, '0')}`,
+                                            CLSKD: `cs${(i + 1).toString().padStart(1, '0')}`,
+                                            CLFWPKD: `cfp${(i + 1).toString().padStart(1, '0')}`,
                                         };
                                         // var aaa=0
 
@@ -325,15 +377,24 @@
 
                                 <tr  align="center">
                                     <td>
-                                        <center>clips #${row.id}</center>
+                                        <center>Clips #${row.id}</center>
                                     </td>
-                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
-                                            <source src="static/audios/UCLFWPKD/L3DAS23/audios/${row.noisy}.wav">
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/UCLFWPKD/L3DAS23/audios_new/${row.noisy}.wav">
                                         </audio></td>
                                     </td>
-                                    <td><audio controls class="audio-player" preload="metadata" style="width:500px;">
-                                            <source src="static/audios/UCLFWPKD/L3DAS23/audios/${row.clean}.wav">
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                            <source src="static/audios/UCLFWPKD/L3DAS23/audios_new/${row.student}.wav">
                                         </audio></td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                        <source src="static/audios/UCLFWPKD/L3DAS23/audios_new/${row.teacher}.wav">
+                                    </audio></td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                        <source src="static/audios/UCLFWPKD/L3DAS23/audios_new/${row.CLSKD}.wav">
+                                    </audio></td>
+                                    <td><audio controls class="audio-player" preload="metadata" ">
+                                        <source src="static/audios/UCLFWPKD/L3DAS23/audios_new/${row.CLFWPKD}.wav">
+                                    </audio></td>
                                 </tr>
                                 
 
